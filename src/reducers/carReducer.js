@@ -1,3 +1,5 @@
+import { BUY_ITEM, REMOVE_ITEM } from '../actions/carActions'
+
 export const initialState = {
     additionalPrice: 0,
     car: {
@@ -17,7 +19,42 @@ export const initialState = {
 
 export const carReducer = (state = initialState, action) => {
     switch(action.type) {
+        case BUY_ITEM:
+            let alreadyPresent = false;
+            state.car.features.forEach(item => {
+                if (item.id === action.payload.id) {
+                    alreadyPresent = true;
+                }
+            })
+            if (alreadyPresent === false) {
+                return {
+                    ...state,
+                    car: {
+                        ...state.car,
+                        features: [...state.car.features, action.payload]
+                    },
+                    additionalFeatures: [...state.additionalFeatures]
+                }
+            }
+            return state;
+        case REMOVE_ITEM:
+            return {
+                ...state,
+                car: {
+                    ...state.car,
+                    features: state.car.features.filter(item => (item.id !== action.payload.id))
+                },
+                additionalFeatures: [...state.additionalFeatures]
+            }
         default:
+            console.log({
+                ...state,
+                car: {
+                    ...state.car,
+                    features: [...state.car.features, state.additionalFeatures[0]]
+                },
+                additionalFeatures: [...state.additionalFeatures]
+            });
             return state;
     }
 }

@@ -1,13 +1,14 @@
-import React, { useReducer } from 'react';
+import React from 'react';
 
 import { connect } from 'react-redux';
+import { addItem, removeItem } from './actions/carActions'
 
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
-const App = ({car, additionalFeatures, additionalPrice}) => {
+const App = props => {
 
   const removeFeature = item => {
     // dispatch an action here to remove an item
@@ -20,12 +21,12 @@ const App = ({car, additionalFeatures, additionalPrice}) => {
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={car} />
-        <AddedFeatures car={car} />
+        <Header car={props.car} />
+        <AddedFeatures car={props.car} removeItem={props.removeItem}/>
       </div>
       <div className="box">
-        <AdditionalFeatures additionalFeatures={additionalFeatures} />
-        <Total car={car} additionalPrice={additionalPrice} />
+        <AdditionalFeatures addItem={props.addItem} additionalFeatures={props.additionalFeatures} />
+        <Total car={props.car} additionalPrice={props.additionalPrice} />
       </div>
     </div>
   );
@@ -39,4 +40,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {})(App);
+export default connect(mapStateToProps, { addItem, removeItem })(App);
