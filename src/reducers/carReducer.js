@@ -29,6 +29,7 @@ export const carReducer = (state = initialState, action) => {
             if (alreadyPresent === false) {
                 return {
                     ...state,
+                    additionalPrice: state.additionalPrice + action.payload.price,
                     car: {
                         ...state.car,
                         features: [...state.car.features, action.payload]
@@ -40,6 +41,7 @@ export const carReducer = (state = initialState, action) => {
         case REMOVE_ITEM:
             return {
                 ...state,
+                additionalPrice: state.additionalPrice - action.payload.price,
                 car: {
                     ...state.car,
                     features: state.car.features.filter(item => (item.id !== action.payload.id))

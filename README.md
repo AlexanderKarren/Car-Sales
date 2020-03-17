@@ -50,15 +50,15 @@ Follow these steps for completing your project.
 
 **Step 1 - Planning 📝**
 
-- [ ] Take a good amount of time to familiarize yourself with the project structure. Figure out what data you have and where it's being used (Pen and paper or a whiteboard will be your best friend here!)
-- [ ] Plan out your state management structure as mentioned above. The only requirment is that you _must_ use Redux
-- [ ] Write out the steps you think you'll need to complete this project. It seems silly, but doing this with every project will help you grow into a better developer a lot faster.
-- [ ] Take note of the few comments throughout the app. They are there as little guides to nudge you in the right direction. You're welcome 😉
+- [x] Take a good amount of time to familiarize yourself with the project structure. Figure out what data you have and where it's being used (Pen and paper or a whiteboard will be your best friend here!)
+- [x] Plan out your state management structure as mentioned above. The only requirment is that you _must_ use Redux
+- [x] Write out the steps you think you'll need to complete this project. It seems silly, but doing this with every project will help you grow into a better developer a lot faster.
+- [x] Take note of the few comments throughout the app. They are there as little guides to nudge you in the right direction. You're welcome 😉
 
 **Step 2 - And... Action! 🎬**
 
-- [ ] Time to get your hands on your keyboard. Look at the first step you wrote down and start implementing!
-- [ ] As you work through setting up redux, you can do it however you'd like. This is the flow that works for me:
+- [x] Time to get your hands on your keyboard. Look at the first step you wrote down and start implementing!
+- [x] As you work through setting up redux, you can do it however you'd like. This is the flow that works for me:
 
 ```text
 Set up "empty" reducer and initial state 👉 Set up store and Provider 👉
@@ -68,11 +68,11 @@ write the reducer logic for the actions 👉 Rinse and repeat
 
 ## _MVP Requirements:_
 
-- [ ] Move the given state to the reducer as the initial state for the Redux store.
-- [ ] Set up the Redux flow
-- [ ] User should be able to add features to their car
-- [ ] User should be able to remove added features from their car
-- T[ ] otal should update as user adds and removes features from their car
+- [x] Move the given state to the reducer as the initial state for the Redux store.
+- [x] Set up the Redux flow
+- [x] User should be able to add features to their car
+- [x] User should be able to remove added features from their car
+- [x] Total should update as user adds and removes features from their car
 
 ## Stretch Problems
 
