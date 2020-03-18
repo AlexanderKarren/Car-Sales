@@ -15,7 +15,7 @@ const Car = props => {
           <AddedFeatures car={props.cars[carID].car} removeItem={props.removeItem}/>
         </div>
         <div className="box">
-          <AdditionalFeatures addItem={props.addItem} additionalFeatures={props.cars[carID].additionalFeatures} />
+          <AdditionalFeatures addItem={props.addItem} carID={carID} additionalFeatures={props.cars[carID].additionalFeatures} />
           <Total car={props.cars[carID].car} additionalPrice={props.cars[carID].additionalPrice} />
         </div>
       </div>

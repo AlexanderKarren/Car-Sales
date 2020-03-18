@@ -39,25 +39,49 @@ export const initialState = {
 
 export const carReducer = (state = initialState, action) => {
     switch(action.type) {
-        case BUY_ITEM:
+    case BUY_ITEM:
             let alreadyPresent = false;
-            state.car.features.forEach(item => {
-                if (item.id === action.payload.id) {
+            state.cars[action.index].car.features.forEach(feature => {
+                if (action.payload.id === feature.id) {
                     alreadyPresent = true;
                 }
             })
-            if (alreadyPresent === false) {
-                return {
-                    ...state,
-                    additionalPrice: state.additionalPrice + action.payload.price,
-                    car: {
-                        ...state.car,
-                        features: [...state.car.features, action.payload]
-                    },
-                    additionalFeatures: [...state.additionalFeatures]
-                }
-            }
-            return state;
+            return (alreadyPresent ? {
+                ...state,
+                cars: state.cars.map(vehicle => {
+                    return {
+                        ...vehicle,
+                        car: {
+                            ...vehicle.car,
+                            features: [...vehicle.car.features]
+                        },
+                        additionalFeatures: [...vehicle.additionalFeatures]
+                    }
+                })
+            } 
+            : {
+                ...state,
+                cars: state.cars.map((vehicle, index) => {
+                    if (action.index === index.toString()) {
+                        return {
+                            ...vehicle,
+                            car: {
+                                ...vehicle.car,
+                                features: [...vehicle.car.features, action.payload]
+                            },
+                            additionalFeatures: [...vehicle.additionalFeatures]
+                        }
+                    }
+                    return {
+                        ...vehicle,
+                        car: {
+                            ...vehicle.car,
+                            features: [...vehicle.car.features]
+                        },
+                        additionalFeatures: [...vehicle.additionalFeatures]
+                    }
+                })
+            })
         case REMOVE_ITEM:
             return {
                 ...state,
