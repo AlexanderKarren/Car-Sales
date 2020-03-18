@@ -8,6 +8,7 @@ export default function CarList(props) {
             return (
                 <div className="car-box">
                     <img src={car.car.image} alt={car.car.name} />
+                    <div>${car.car.price}</div>
                     <Link to={`/car/${index}`}>{car.car.name}</Link>
                 </div>
             )
