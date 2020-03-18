@@ -12,7 +12,7 @@ const Car = props => {
         <div className="boxes">
         <div className="box">
           <Header car={props.cars[carID].car} />
-          <AddedFeatures car={props.cars[carID].car} removeItem={props.removeItem}/>
+          <AddedFeatures car={props.cars[carID].car} removeItem={props.removeItem} carID={carID}/>
         </div>
         <div className="box">
           <AdditionalFeatures addItem={props.addItem} carID={carID} additionalFeatures={props.cars[carID].additionalFeatures} />
