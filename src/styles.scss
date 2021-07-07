@@ -1,8 +1,8 @@
-html, body, #root {
-  height: 100%;
-}
-body {
+html {
   background: #333;
+}
+
+body {
   margin: 0;
   display: grid;
   padding: 3em;
@@ -13,6 +13,24 @@ body {
   grid-gap: 2em;
   grid-template-columns: repeat(2, minmax(350px, 1fr));
   grid-template-rows: auto;
+}
+.car-selection {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  .car-box {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-color:white;
+    width:60%;
+    margin:10px;
+    padding:10px;
+    border-radius:5px;
+    img {
+      width:60%;
+    }
+  }
 }
 .box {
   display: flex;

@@ -22,15 +22,15 @@ In this project you will implement Redux to manage the state for this React appl
 
 This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your team lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository in your terminal.
-- [ ] Download project dependencies by running `npm install`.
-- [ ] Add the dependencies you will need to implement Redux, using **npm**.
-- [ ] Start up the app using `npm start`.
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add your team lead as collaborator on Github.
+- [x] Clone your OWN version of the repository in your terminal.
+- [x] Download project dependencies by running `npm install`.
+- [x] Add the dependencies you will need to implement Redux, using **npm**.
+- [x] Start up the app using `npm start`.
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
       Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
@@ -50,15 +50,15 @@ Follow these steps for completing your project.
 
 **Step 1 - Planning 📝**
 
-- Take a good amount of time to familiarize yourself with the project structure. Figure out what data you have and where it's being used (Pen and paper or a whiteboard will be your best friend here!)
-- Plan out your state management structure as mentioned above. The only requirment is that you _must_ use Redux
-- Write out the steps you think you'll need to complete this project. It seems silly, but doing this with every project will help you grow into a better developer a lot faster.
-- Take note of the few comments throughout the app. They are there as little guides to nudge you in the right direction. You're welcome 😉
+- [x] Take a good amount of time to familiarize yourself with the project structure. Figure out what data you have and where it's being used (Pen and paper or a whiteboard will be your best friend here!)
+- [x] Plan out your state management structure as mentioned above. The only requirment is that you _must_ use Redux
+- [x] Write out the steps you think you'll need to complete this project. It seems silly, but doing this with every project will help you grow into a better developer a lot faster.
+- [x] Take note of the few comments throughout the app. They are there as little guides to nudge you in the right direction. You're welcome 😉
 
 **Step 2 - And... Action! 🎬**
 
-- Time to get your hands on your keyboard. Look at the first step you wrote down and start implementing!
-- As you work through setting up redux, you can do it however you'd like. This is the flow that works for me:
+- [x] Time to get your hands on your keyboard. Look at the first step you wrote down and start implementing!
+- [x] As you work through setting up redux, you can do it however you'd like. This is the flow that works for me:
 
 ```text
 Set up "empty" reducer and initial state 👉 Set up store and Provider 👉
@@ -68,17 +68,17 @@ write the reducer logic for the actions 👉 Rinse and repeat
 
 ## _MVP Requirements:_
 
-- Move the given state to the reducer as the initial state for the Redux store.
-- Set up the Redux flow
-- User should be able to add features to their car
-- User should be able to remove added features from their car
-- Total should update as user adds and removes features from their car
+- [x] Move the given state to the reducer as the initial state for the Redux store.
+- [x] Set up the Redux flow
+- [x] User should be able to add features to their car
+- [x] User should be able to remove added features from their car
+- [x] Total should update as user adds and removes features from their car
 
 ## Stretch Problems
 
 Do not attempt stretch problems until MVP has been reached and a final commit has been made.
 
-- Use Redux hooks instead of HOCs
-- Implement React-Router and add a starter page where the user can choose a car. Each car should have different features that have different pricing. Have fun with this! It could end up being really cool.
-- Look into the docs for Bulma and change up the styling.
-- Implement an API from one of these sites [here](https://www.google.com/search?q=car+sales+api&rlz=1C5CHFA_enUS809US809&oq=car+sales+api&aqs=chrome..69i57j0l5.3580j0j1&sourceid=chrome&ie=UTF-8). I don't know if there are any good open APIs for this, so explore around. Check out what data these APIs return, and what you think would be fun to work with. The sky is the limit here!
+- [ ] Use Redux hooks instead of HOCs
+- [x] Implement React-Router and add a starter page where the user can choose a car. Each car should have different features that have different pricing. Have fun with this! It could end up being really cool.
+- [ ] Look into the docs for Bulma and change up the styling.
+- [ ] Implement an API from one of these sites [here](https://www.google.com/search?q=car+sales+api&rlz=1C5CHFA_enUS809US809&oq=car+sales+api&aqs=chrome..69i57j0l5.3580j0j1&sourceid=chrome&ie=UTF-8). I don't know if there are any good open APIs for this, so explore around. Check out what data these APIs return, and what you think would be fun to work with. The sky is the limit here!
